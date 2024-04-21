@@ -1,0 +1,160 @@
+{% extends 'app/index.html' %} {%block home%}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>products-shop now</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+
+    <!-- Vendor CSS Files -->
+
+    <link
+      href="../../static/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../static/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../static/vendor/boxicons/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../static/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="../../static/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link
+      href="../../static/vendor/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      margin: 0;
+      font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-size: 0.8125rem;
+      font-weight: 400;
+      line-height: 1.5385;
+      color: #333;
+      text-align: left;
+      background-color: #2196f3;
+    }
+
+    .mt-50 {
+      margin-top: 50px;
+    }
+
+    .mb-50 {
+      margin-bottom: 50px;
+    }
+
+    .card {
+      position: relative;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      border-radius: 0.1875rem;
+      height: 450px;
+      padding: 20px;
+    }
+
+    .card-img-actions {
+      position: relative;
+    }
+    .card-body {
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .card-img {
+      width: 150px;
+    }
+
+    .star {
+      color: red;
+    }
+
+    .bg-cart {
+      background-color: green;
+      color: #fff;
+    }
+
+    .bg-cart:hover {
+      background-color: white;
+      color: black;
+      border-color: black;
+    }
+
+    .bg-buy {
+      background-color: green;
+      color: #fff;
+      padding-right: 29px;
+    }
+    .bg-buy:hover {
+      color: #fff;
+    }
+
+    a {
+      text-decoration: none !important;
+    }
+  </style>
+  <body>
+<div id="pd">
+    <h1 style="color:white;background-color:black;padding-left:650px;">shop now!</h1>
+    <div class="container d-flex justify-content-center mt-50 mb-50">
+      <div class="row">
+        {% for product in pd %}
+        <div class="col-md-4 mt-2">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-img-actions">
+                <img
+                  src="{{ product.image.url }}"
+                  alt="Product Image"
+                  class="card-img img-fluid"
+                />
+              </div>
+            </div>
+
+            <div class="card-body bg-light text-center">
+              <div class="mb-2">
+                <h6 class="font-weight-semibold mb-2">
+                  <a href="#" class="text-default mb-2" data-abc="true"
+                    >{{ product.pname }}</a
+                  >
+                </h6>
+
+                <a href="#" class="text-muted" data-abc="true">Electronics</a>
+              </div>
+
+              <h3 class="mb-0 font-weight-semibold">{{ product.price }}</h3>
+            </div>
+            
+            <button type="submit" class="btn bg-cart">
+              <i class="fa fa-cart-plus mr-2"></i> Add to cart
+            </button>
+          </div>
+          <br />
+        </div>
+        {% endfor %}
+      </div>
+      <br />
+    </div>
+    <script src="" async defer></script>
+  </body>
+</div>
+  {%endblock home%}

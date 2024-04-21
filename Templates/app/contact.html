@@ -1,0 +1,26 @@
+{% extends 'app/index.html' %} {%block home %}<br /><br />
+
+<div id="cont">
+<div class="container md-5">
+  <div class="card mx-auto" style="width: 450px; border-radius: 10px pd-5">
+    <div class="card-header text-center bg-primary pd-5">
+      <h1 style="color: white">Contact us</h1>
+    </div>
+    <div class="card-body">
+      <form action="/contact" method="POST" style="padding=10px">
+        {{ form.as_p }} {% csrf_token %}
+        <button
+          type="submit"
+          id="111"
+          class="btn btn-primary btn-block,"
+          style="align-content= center;margin-left: 40%;"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<br />
+{%endblock home %}

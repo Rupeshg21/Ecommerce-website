@@ -1,0 +1,95 @@
+{% extends 'app/index.html' %} {%block btn%}
+
+<button type="button" class="btn btn-success">
+  <li><a class="nav-link scrollto" href="/login">login</a></li>
+</button>
+{%endblock btn%} {%block section %}
+<form action="/signup" method="POST">
+  {%csrf_token%}
+  <div class="container py-3 h-50">
+    <div class="row d-flex justify-content-center align-items-center h-80">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem">
+          <div class="card-body p-4 text-center">
+            <div class="mb-md-0 mt-md-4 pb-5">
+              {% for message in messages %}
+              <div class="alert alert-{{message.tags}}" role="alert">
+                <strong>{{message}}</strong>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="alert"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              {% endfor %}
+              <h2 class="fw-bold mb-0 text-uppercase">Signup</h2>
+              <br />
+              <br />
+              <div data-mdb-input-init class="form-outline form-white mb-4">
+                <input
+                  type="name"
+                  id="name"
+                  class="form-control form-control-lg"
+                  placeholder="enter your name"
+                  name="name"
+                  required
+                />
+              </div>
+
+              <div data-mdb-input-init class="form-outline form-white mb-4">
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control form-control-lg"
+                  placeholder="enter email"
+                  name="email"
+                  required
+                />
+              </div>
+
+              <div data-mdb-input-init class="form-outline form-white mb-4">
+                <input
+                  type="password"
+                  id="password"
+                  class="form-control form-control-lg"
+                  placeholder="enter password"
+                  name="password"
+                  required
+                />
+              </div>
+
+              <div data-mdb-input-init class="form-outline form-white mb-4">
+                <input
+                  type="password"
+                  id="Password1"
+                  class="form-control form-control-lg"
+                  placeholder="Repeat your password"
+                  name="password1"
+                  required
+                />
+              </div>
+
+              <button
+                data-mdb-button-init
+                data-mdb-ripple-init
+                class="btn btn-outline-light btn-lg px-5"
+                type="submit"
+              >
+                Signup</button
+              ><br />
+              <hr />
+              <p>
+                Already User?
+                <a href="/login" class="text-white-50 fw-bold">Log in</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock %}
