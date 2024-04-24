@@ -1,5 +1,5 @@
 
-![image](![1](https://github.com/Rupeshg21/Ecommerce-website/assets/113461314/0dc9179c-8763-408c-afe8-28a93008f426)
+(![1](https://github.com/Rupeshg21/Ecommerce-website/assets/113461314/0dc9179c-8763-408c-afe8-28a93008f426)
 
 
 ![image](![2](https://github.com/Rupeshg21/Ecommerce-website/assets/113461314/85b70fff-e752-43a3-863e-b90a48cee2f5)
